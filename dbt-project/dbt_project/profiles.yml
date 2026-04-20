@@ -4,8 +4,8 @@ weather_project:
     dev:
       type: bigquery
       method: service-account
-      project: bamboo-depth-486215-u4
-      dataset: weather_analytics
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('BQ_DATASET') }}"
       keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
       location: EU
       threads: 4
