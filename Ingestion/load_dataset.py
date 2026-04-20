@@ -31,7 +31,7 @@ def get_last_loaded_timestamp(client, table_id):
 
 def main():
     # Step 0: Download dataset
-    #download_kaggle_dataset()
+    download_kaggle_dataset()
     # Load dataset
     df = pd.read_csv("data/GlobalWeatherRepository.csv")
 
