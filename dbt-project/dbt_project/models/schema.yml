@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: external
+    database: bamboo-depth-486215-u4   # your GCP project (keep this)
+    schema: weather_analytics          # THIS is your BigQuery dataset
+    tables:
+      - name: weather_processed

@@ -1,0 +1,31 @@
+id: weather-pipeline
+namespace: de-project
+
+tasks:
+
+  # 1️⃣ Ingestion
+  - id: ingest
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - uv run /workspace/Ingestion/load_dataset.py
+
+  # 2️⃣ Spark transformation
+  - id: transform
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - uv run /workspace/Spark/transform_weather.py
+
+  
+  # 4️⃣ Load to BigQuery
+  - id: load_bq
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - uv run /workspace/Spark/load_to_bq.py
+
+  # 5️⃣ Run dbt
+  - id: dbt_run
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - cd /workspace/dbt_project/dbt_project
+      - uv run dbt run
+      - uv run dbt test
