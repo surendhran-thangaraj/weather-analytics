@@ -55,8 +55,7 @@ project/
 ├── ingestion/
 ├── spark/
 ├── dbt_project/
-├── scripts/
-│   └── run_pipeline.ps1
+│── run_pipeline.ps1
 ├── .env
 ├── README.md
 ```
@@ -93,7 +92,7 @@ pip install -r requirements.txt
 ### 2. Run pipeline
 
 ```
-.\scripts\run_pipeline.ps1
+run_pipeline.ps1
 ```
 
 ---
