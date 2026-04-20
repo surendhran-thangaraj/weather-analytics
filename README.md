@@ -4,6 +4,9 @@
 
 This project implements an end-to-end data engineering pipeline that ingests, processes, and analyzes global weather data. The pipeline is fully automated, incrementally processes new data, and produces analytics-ready datasets for visualization.
 
+Dashboard:
+https://lookerstudio.google.com/reporting/253ac0a7-8819-46f6-ab3a-d7b8cefdb5c1
+
 ---
 
 ## 🏗️ Architecture
